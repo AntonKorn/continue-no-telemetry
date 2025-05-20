@@ -1,6 +1,6 @@
 import {
-  ILLMLogger,
   ILLMInteractionLog,
+  ILLMLogger,
   LLMInteractionItem,
   LLMInteractionItemDetails,
 } from "..";
@@ -17,13 +17,13 @@ export class LLMLogger implements ILLMLogger {
   private logItemListeners: LLMLogItemFunction[] = [];
 
   onLogItem(listener: LLMLogItemFunction) {
-    this.logItemListeners.push(listener);
+    // this.logItemListeners.push(listener);
   }
 
   public _logItem(item: LLMInteractionItem) {
-    for (const listener of this.logItemListeners) {
-      listener(item);
-    }
+    // for (const listener of this.logItemListeners) {
+    //   listener(item);
+    // }
   }
 }
 
